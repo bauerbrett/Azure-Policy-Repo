@@ -27,7 +27,7 @@ key_policy = {
                                                                                 "description":  "The target Log Analytics Workspace for Azure Diagnostics",
                                                                                 "strongType":  "omsWorkspace"
                                                                             },
-                                                                "defaultValue": "/subscriptions/3b8667c6-8f75-42ea-b301-bf27c9db8674/resourceGroups/azlabs/providers/Microsoft.OperationalInsights/workspaces/Sentinel-Test"
+                                                                "defaultValue": "/subscriptions/{id}/resourceGroups/azlabs/providers/Microsoft.OperationalInsights/workspaces/Sentinel-Test"
                                                            },
                                           "azureRegions":  {
                                                                "type":  "Array",
@@ -97,8 +97,8 @@ key_policy = {
                                                                                                             ]
                                                                                               },
                                                                        "roleDefinitionIds":  [
-                                                                                                 "/subscriptions/3b8667c6-8f75-42ea-b301-bf27c9db8674/providers/Microsoft.Authorization/roleDefinitions/92aaf0da-9dab-42b6-94a3-d43ce8d16293",
-                                                                                                 "/subscriptions/3b8667c6-8f75-42ea-b301-bf27c9db8674/providers/Microsoft.Authorization/roleDefinitions/749f88d5-cbae-40b8-bcfc-e573ddc772fa"
+                                                                                                 "/subscriptions/{id}/providers/Microsoft.Authorization/roleDefinitions/92aaf0da-9dab-42b6-94a3-d43ce8d16293",
+                                                                                                 "/subscriptions/{id}/providers/Microsoft.Authorization/roleDefinitions/749f88d5-cbae-40b8-bcfc-e573ddc772fa"
                                                                                              ],
                                                                        "deployment":  {
                                                                                           "properties":  {
@@ -239,7 +239,7 @@ storage_account_policy = {
           "strongType": "omsWorkspace",
           "assignPermissions": True
         },
-        "defaultValue": "/subscriptions/3b8667c6-8f75-42ea-b301-bf27c9db8674/resourceGroups/azlabs/providers/Microsoft.OperationalInsights/workspaces/Sentinel-Test"
+        "defaultValue": "/subscriptions/{id}/resourceGroups/azlabs/providers/Microsoft.OperationalInsights/workspaces/Sentinel-Test"
         
       },
       "metricsEnabled": {
@@ -421,7 +421,7 @@ recovery_vault_policy = {
                                                                                 "description":  "The target Log Analytics Workspace for Azure Diagnostics",
                                                                                 "strongType":  "omsWorkspace"
                                                                             },
-                                                                "defaultValue": "/subscriptions/3b8667c6-8f75-42ea-b301-bf27c9db8674/resourceGroups/azlabs/providers/Microsoft.OperationalInsights/workspaces/Sentinel-Test"
+                                                                "defaultValue": "/subscriptions/{id}/resourceGroups/azlabs/providers/Microsoft.OperationalInsights/workspaces/Sentinel-Test"
                                                            },
                                           "azureRegions":  {
                                                                "type":  "Array",
@@ -491,8 +491,8 @@ recovery_vault_policy = {
                                                                                                             ]
                                                                                               },
                                                                        "roleDefinitionIds":  [
-                                                                                                 "/subscriptions/3b8667c6-8f75-42ea-b301-bf27c9db8674/providers/Microsoft.Authorization/roleDefinitions/92aaf0da-9dab-42b6-94a3-d43ce8d16293",
-                                                                                                 "/subscriptions/3b8667c6-8f75-42ea-b301-bf27c9db8674/providers/Microsoft.Authorization/roleDefinitions/749f88d5-cbae-40b8-bcfc-e573ddc772fa"
+                                                                                                 "/subscriptions/{id}/providers/Microsoft.Authorization/roleDefinitions/92aaf0da-9dab-42b6-94a3-d43ce8d16293",
+                                                                                                 "/subscriptions/{id}/providers/Microsoft.Authorization/roleDefinitions/749f88d5-cbae-40b8-bcfc-e573ddc772fa"
                                                                                              ],
                                                                        "deployment":  {
                                                                                           "properties":  {

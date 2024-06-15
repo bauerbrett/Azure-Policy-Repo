@@ -12,8 +12,8 @@ import uuid
 
 #Create the variables
 token = DefaultAzureCredential()
-management_group_id = "134888ca-e6f2-4fb6-9b49-3042d590ea87"
-subscription_id = "3b8667c6-8f75-42ea-b301-bf27c9db8674"
+management_group_id = ""
+subscription_id = ""
 group_name = "AZ500Test"
 
 #Create the objects 
@@ -101,7 +101,7 @@ def assign_initiative():
     """Assign the initiative we just created and assign roles for the identity so we can remediate with it."""
     #Get identity so we can remediate with it.
     identity = Identity(type="SystemAssigned")
-    identity.tenant_id = "134888ca-e6f2-4fb6-9b49-3042d590ea87"
+    identity.tenant_id = ""
 
     #Get Initiative ID
     init_id, def_id = create_initiative()
@@ -127,7 +127,7 @@ def assign_initiative():
     #print(managed_identity_principal_id) #Use this to make sure it works.
 
     #Roles to assign identity. Find the role id you need an put into this list.
-    roles = ["749f88d5-cbae-40b8-bcfc-e573ddc772fa", "92aaf0da-9dab-42b6-94a3-d43ce8d16293"]
+    roles = ["749f88d5-cbae-40b8-bcfc-e573ddc772fa", "92aaf0da-9dab-42b6-94a3-d43ce8d16293"] #Monitoring Contributor and Log Analytic Contributor
     
     # Assign the role to the managed identity
     for role in roles:
@@ -224,7 +224,13 @@ def remediation():
     print("All remediation tasks completed.")
         
 
-remediation()
+def main():
+    """Run the remediation function"""
+    remediation()
+
+
+if __name__ == "__main__":
+    main()
 
 
 
